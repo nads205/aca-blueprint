@@ -3,8 +3,14 @@ variable "aca_name" {
   type        = string
   description = "Name for Azure Container App"
 }
-variable "location" {
+variable "primary_location" {
   default     = "uksouth"
+  type        = string
+  description = "Location of Azure resources"
+}
+
+variable "secondary_location" {
+  default     = "northeurope"
   type        = string
   description = "Location of Azure resources"
 }
