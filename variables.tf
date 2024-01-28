@@ -1,10 +1,10 @@
 variable "aca_name" {
-  default     = "blueprintaca"
+  default     = "blueprintaca4321"
   type        = string
   description = "Name for Azure Container App"
 }
 variable "location" {
-  default     = "westeurope"
+  default     = "uksouth"
   type        = string
   description = "Location of Azure resources"
 }
