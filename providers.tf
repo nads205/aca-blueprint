@@ -1,25 +1,26 @@
 terraform {
-  backend "local" {
-  }
+  cloud {
+    organization = "sseplc"
 
+    workspaces {
+      name = "sub-airtricitycms-dev-gbl-002"
+    }
+  }
   required_providers {
     azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "3.44.1"
+      source  = "azurerm"
+      version = ">= 3.59.0"
+    }
+    azapi = {
+      source = "Azure/azapi"
     }
   }
-
 }
-
 provider "azurerm" {
   features {
-    key_vault {
-      purge_soft_delete_on_destroy    = true
-      recover_soft_deleted_key_vaults = true
-    }
-    resource_group {
-      prevent_deletion_if_contains_resources = false
-    }
   }
+  use_oidc = true
 }
 
+provider "azapi" {
+}
