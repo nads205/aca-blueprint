@@ -1,5 +1,7 @@
-
 ### This repo contains a sample on how to use Terraform to create the following resources:
+
+This repo is my version of the example from https://github.com/vieiraae/aca-blueprint and https://techcommunity.microsoft.com/t5/fasttrack-for-azure/integrating-azure-front-door-waf-with-azure-container-apps/ba-p/3729081
+
 * Resource Group - that includes the following resources
 * VNET with one subnet for the Private Link Service and another one for the Azure Container Apps Environment
 * Container Registry - this sample uses a mcr hello world container image so the registry is not really used, but glues containers apps and the registry with a managed identity for the CI/CD process
